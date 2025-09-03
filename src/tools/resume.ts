@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const resumePath = path.join(__dirname, "..", "resume.json");
+const resumePath = path.join(process.cwd(), "src", "resume.json");
 const resume = JSON.parse(fs.readFileSync(resumePath, "utf-8"));
 
 export function queryResume(question: string): string {
