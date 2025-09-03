@@ -1,0 +1,114 @@
+{
+  "personal_info": {
+    "name": "Oshadi Palliyaguruge",
+    "email": "oshadi.palliyaguruge@gmail.com",
+    "phone": "+94 70 438 1106",
+    "linkedin": "https://www.linkedin.com/in/oshadi-palliyaguruge",
+    "github": "https://github.com/OshadiPalliyaguruge",
+    "location": "Gampaha, Sri Lanka"
+  },
+  "last_position": {
+    "title": "Software Engineering Intern - Application Security",
+    "company": "London Stock Exchange Group (LSEG)",
+    "start_date": "2024-04-01",
+    "end_date": "2024-10-31",
+    "responsibilities": [
+      "Automated vulnerability scanning workflows using Python, Bash scripts, and Docker",
+      "Integrated multiple security tools into a unified automation pipeline",
+      "Performed penetration testing on critical applications",
+      "Automated report generation to visualize scan results for risk analysis"
+    ],
+    "tools_technologies": [
+      "Burp Suite", "OWASP ZAP", "SSLScan", "Sslyze", "Nikto", "Nmap", "cURL", "Wget",
+      "Python", "Shell scripting", "JavaScript", "React.js", "Docker", "OWASP WSTG", "TOP 10"
+    ]
+  },
+  "previous_positions": [],
+  "education": [
+    {
+      "degree": "BSc. Eng (Hons) in Computer Engineering - First Class",
+      "institution": "University of Sri Jayewardenepura",
+      "minor": "Data Management",
+      "gpa": "3.73/4.00",
+      "start_date": "2019-08-01",
+      "end_date": "2023-06-01"
+    },
+    {
+      "degree": "G.C.E. Advanced Level - Physical Science",
+      "institution": "Rathnawali Balika Vidyalaya",
+      "grades": "2As & 1B",
+      "year": 2019
+    },
+    {
+      "degree": "G.C.E. Ordinary Level",
+      "institution": "Rathnawali Balika Vidyalaya",
+      "grades": "9As",
+      "year": 2016
+    }
+  ],
+  "skills": [
+    "C", "C#", "C++", "Python", "Java", "JavaScript", "TypeScript", "Dart",
+    "React", "Bootstrap", "Flutter", "Spring Boot", ".NET",
+    "MySQL", "PostgreSQL",
+    "VS Code", "Visual Studio", "Android Studio", "PyCharm", "IntelliJ IDEA",
+    "Docker", "Jupyter Notebook", "Kaggle", "Power BI", "Postman", "Linux CLI", "AWS", "Google Cloud Platform"
+  ],
+  "certifications": [
+    {
+      "name": "HTML, CSS and JavaScript",
+      "provider": "University of Michigan | Coursera"
+    },
+    {
+      "name": "Machine Learning Specialization",
+      "provider": "DeepLearning.ai and Stanford University | Coursera"
+    },
+    {
+      "name": "Introduction to Cybersecurity Tools & Cyber Attacks",
+      "provider": "IBM | Coursera"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Building a Data Lake using Camera Footages",
+      "description": "Performed object detection on camera footages and built a data lake for raw data. Used Spark for preprocessing and Elasticsearch & Kibana for visualization.",
+      "technologies": ["Python", "JSON", "MinIO", "Apache Spark", "Elasticsearch", "Kibana", "OpenCV", "Yolo", "Supervision"]
+    },
+    {
+      "name": "Attendance and Payroll Management System",
+      "description": "Microservices-based Attendance and Payroll System with API Gateway and service discovery.",
+      "technologies": ["Java", "Spring Boot", "Eureka", "NGINX", "PostgreSQL", "Docker", "Postman"]
+    },
+    {
+      "name": "IT Helpdesk Incident Analysis System",
+      "description": "Data-driven IT Helpdesk optimization system using hybrid neural network and NLP for predictive ticket assignment and solution recommendations.",
+      "technologies": ["React", "JavaScript", "Python", "MySQL", "Firebase", "Neural Network", "BERT Embedding", "NLP", "Power BI", "FastAPI", "Kaggle", "Google Colab"]
+    },
+    {
+      "name": "Aduwa - University Canteen App",
+      "description": "Cloud-based mobile app for university food ordering, allowing students to place, update, and cancel orders while canteen owners manage them.",
+      "technologies": ["Python", "Dart", "Flutter", "Firebase", "MySQL", "Google Cloud Platform", "Google Maps API"]
+    }
+  ],
+  "volunteer_experience": [
+    {
+      "role": "Assistant Secretary",
+      "organization": "SEDS J'PURA - Student for the Exploration and Development of Space",
+      "years": "2022-2023"
+    },
+    {
+      "role": "Media Division Manager",
+      "organization": "SEDS J'PURA",
+      "years": "2023-2024"
+    },
+    {
+      "role": "Organizing Committee Member",
+      "organization": "Project Be Professionally Equipped 4.0 - Rotaract Club USJ",
+      "years": "2022"
+    },
+    {
+      "role": "Committee Member",
+      "organization": "CENSOC - Computer Engineering Society FOE USJ",
+      "years": "2024-2025"
+    }
+  ]
+}

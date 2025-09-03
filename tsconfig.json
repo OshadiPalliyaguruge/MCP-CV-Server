@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2020",               // modern JS features
-    "module": "CommonJS",             // Node.js standard
-    "strict": true,                   // enable strict type checking
-    "esModuleInterop": true,          // allow import/export compatibility
-    "outDir": "dist",                 // compiled files go here
-    "rootDir": "src",                 // source folder
-    "skipLibCheck": true,             // skip type checking for node_modules
+    "module": "nodenext",       
+    "moduleResolution": "nodenext",
+    "target": "ES2020",           
+    "strict": true,                   
+    "esModuleInterop": true,          
+    "outDir": "dist",                 
+    "rootDir": "src",                 
+    "skipLibCheck": true,            
     "forceConsistentCasingInFileNames": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true
