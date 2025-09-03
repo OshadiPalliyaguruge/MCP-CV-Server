@@ -1,60 +1,38 @@
-import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import { z } from "zod";
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
 import { queryResume } from './tools/resume';
 import { sendEmail } from './tools/email';
+import dotenv from "dotenv";
+dotenv.config();
 
-async function main() {
-  const server = new McpServer(
-    { name: "cv-email-mcp", version: "1.0.0" },
-    { capabilities: { tools: {} } }
-  );
+const app = express();
+app.use(cors()); 
+app.use(bodyParser.json());
 
-  // Tool: resume.query
-  server.registerTool(
-    "resume.query",
-    {
-      title: "Query Resume",
-      description: "Ask questions about the resume",
-      inputSchema: {
-        question: z.string()
-      },
-    },
-    async (input) => {
-      const answer = queryResume(input.question);
-      return {
-        content: [
-          { type: "text", text: answer }
-        ]
-      };
-    }
-  );
+// Resume query endpoint
+app.post("/resume", (req, res) => {
+  const { question } = req.body;
+  const answer = queryResume(question);
+  res.json({ answer });
+});
 
-  // Tool: email.send
-  server.registerTool(
-    "email.send",
-    {
-      title: "Send Email",
-      description: "Send an email notification",
-      inputSchema: {
-        to: z.string(),
-        subject: z.string(),
-        body: z.string()
-      },
-    },
-    async (input) => {
-      const result = await sendEmail(input.to, input.subject, input.body);
-      return {
-        content: [
-          { type: "text", text: result }
-        ]
-      };
-    }
-  );
+// Email sending endpoint
+app.post("/email", async (req, res) => {
+  const { to, subject, body } = req.body;
+  try {
+    const result = await sendEmail(to, subject, body);
+    res.json({ result });
+  } catch (err: any) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
-  const transport = new StdioServerTransport();
-  await server.connect(transport);
-  console.log("MCP server running...");
-}
+app.get("/", (req, res) => {
+  res.send("MCP server is running!");
+});
 
-main().catch(console.error);
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`MCP server running on http://localhost:${PORT}`);
+});
