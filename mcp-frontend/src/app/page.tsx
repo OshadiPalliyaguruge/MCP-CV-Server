@@ -11,7 +11,7 @@ export default function Home() {
 
   async function askResume() {
     try {
-      const res = await fetch("http://localhost:4000/resume", {
+      const res = await fetch("/resume", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
@@ -25,7 +25,7 @@ export default function Home() {
 
   async function sendEmail() {
     try {
-      const res = await fetch("http://localhost:4000/email", {
+      const res = await fetch("/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(email),

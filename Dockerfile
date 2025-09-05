@@ -46,7 +46,7 @@ COPY --from=backend-builder /app/mcp-frontend ./mcp-frontend
 COPY --from=backend-builder /app/src/resume.json ./src/resume.json
 COPY package*.json ./
 COPY tsconfig.json ./
-COPY .env ./
+
 
 # Install only production dependencies
 RUN npm install --omit=dev
