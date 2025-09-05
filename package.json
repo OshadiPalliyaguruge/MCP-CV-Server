@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build:backend": "tsc",
+    "build:frontend": "cd mcp-frontend && next build",
+    "build": "npm run build:frontend && npm run build:backend",
     "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts"
+    "dev": "concurrently \"ts-node src/index.ts\" \"cd mcp-frontend && next dev\""
   },
   "keywords": [],
   "author": "",
@@ -17,7 +19,10 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
-    "nodemailer": "^7.0.6"
+    "next": "^15.5.2",
+    "nodemailer": "^7.0.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.6",
@@ -25,6 +30,8 @@
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
     "@types/nodemailer": "^7.0.1",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }

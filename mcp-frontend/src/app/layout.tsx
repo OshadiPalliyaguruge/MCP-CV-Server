@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "User Friendly App",
-  description: "A simple, clean, and user-friendly Next.js app",
+  title: "MCP CV Server",
+  description: "A simple and user-friendly Next.js app for mcp server",
 };
 
 export default function RootLayout({
